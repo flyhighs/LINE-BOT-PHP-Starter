@@ -15,11 +15,22 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-
+			
+			//TEST MSG
+			$str = explode(" ", $text);
+			$res ="";
+			if($str[0] == "fish"){
+				$res = "ปลาไงไอ้ควาย";
+			}else if($str[0] == "bird"){
+				$res = "นกไงไอ้โง่";
+			}else{
+				$res = "กูจะรู้ไหมละไอ้สัด่";
+			}
+			
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text.'23415'
+				'text' => $res
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
@@ -41,6 +52,7 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
+			echo "ความเอ้ย ถามอะไรโง่ๆ";
 		}
 	}
 }
