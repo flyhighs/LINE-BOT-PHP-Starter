@@ -17,14 +17,54 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			
 			//TEST MSG
-			$str = explode(" ", $text);
 			$res ="";
-			if($str[0] == "fish"){
-				$res = "ปลาไงไอ้ควาย";
-			}else if($str[0] == "bird"){
-				$res = "นกไงไอ้โง่";
-			}else{
-				$res = "กูจะรู้ไหมละไอ้สัด";
+			switch ($text) {
+			    case (preg_match('/สวัสดี/', $text) ? true : false):
+				$res = "สวัสดีจ้า";
+			    break;
+			    case (preg_match('/ขอบคุณ/', $text) ? true : false):
+				$res = "ขอบคุณค่าา";
+			    break;
+			    case (preg_match('/รัก/', $text) ? true : false):
+				$res = "รักนะค๊า";
+			    break;
+			    case (preg_match('/บอส/', $text) ? true : false):
+				$res = "คนที่เฮนเฌอไปหาเนย";
+			    break;
+			    case (preg_match('/BNK/', $text) ? true : false):
+				$res = "ร้จักแค่ป้าแก้ว,เฌอ,เนย และก็ตาหวานข่าาา";
+			    break;
+			    case (preg_match('/ชื่ออะไร/', $text) ? true : false):
+				$res = "เล้งแซ้บ48 เซเลปแห่งข้าวอกไก่";
+			    break;
+			    case (preg_match('/แนะนำตัว/', $text) ? true : false):
+				$res = "เล้งแซ้บ48 เซเลปแห่งข้าวอกไก่";
+			    break;
+			    case (preg_match('/แก้ว/', $text) ? true : false):
+				$res = "คนที่ขาสั้นๆ ปากๆดีเชิดๆป่าวค๊ะ";
+			    break;
+			    case (preg_match('/เฌอ/', $text) ? true : false):
+				$res = "คนที่บอสพูดว่า รักนะคะ แล้วนางก็พูดกลับมาแค่ขอบคุณมาสินะคะ จางในจาง";
+			    break;
+			    case (preg_match('/เนย/', $text) ? true : false):
+				$res = "ใช่คนที่น่ารักๆ พูดว่าบว่าาา ป่าวนะ";
+			    break;
+			    case (preg_match('/น่ารัก/', $text) ? true : false):
+				$res = "บว้าาาาา";
+			    break;
+			    case (preg_match('/ตาหวาน/', $text) ? true : false):
+				$res = "ถ้าจำไม่ผิดคนที่ตัวเตี้ยผิวเหลืองแน่นอน";
+			    break;
+			    case (preg_match('/ใช่/', $text) ? true : false):
+				$res = "ถูกด้วย หูวววว";
+			    break;
+			    case (preg_match('/55/', $text) ? true : false):
+				$res = "555555555555555";
+			    break;
+
+			    default:
+				$res = "ไม่ทราบข่า ถามไม่ตรงคำำตอบ";
+			    break;
 			}
 			
 			// Build message to reply back
