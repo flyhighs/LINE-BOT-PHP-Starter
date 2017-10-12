@@ -93,6 +93,9 @@ if (!is_null($events['events'])) {
 				case (preg_match('/หยุดพูด/', $text) ? true : false):
 				    $res = "จะให้เงียบ ก็เลิกพิมคำว่า bot นำหน้าดิ";
 				break;
+				case (preg_match('/bot/', $text) ? true : false):
+				    $res = "อยากเผือกอะไร เล่ามาสิค๊ะ เล่ามาาาา";
+				break;
 				default:
 				    $res = "ไม่ทราบข่า ไว้จะไปเผือกมาเพิ่มนะคะ";
 				break;
