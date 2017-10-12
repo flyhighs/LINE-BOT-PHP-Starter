@@ -61,9 +61,11 @@ if (!is_null($events['events'])) {
 			    case (preg_match('/55/', $text) ? true : false):
 				$res = "555555555555555";
 			    break;
-
+			    case (preg_match('/โหล/', $text) ? true : false):
+				$res = "เอากี่โหลดีเอ่ย";
+			    break;
 			    default:
-				$res = "ไม่ทราบข่า ถามไม่ตรงคำำตอบ";
+				$res = "ไม่ทราบข่า ถามไม่ตรงคำตอบ";
 			    break;
 			}
 			
