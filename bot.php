@@ -40,8 +40,11 @@ if (!is_null($events['events'])) {
 			    case (preg_match('/BNK/', $text) ? true : false):
 				$res = "รู้จักแค่ป้าแก้ว,เฌอ,เนย และก็ตาหวานข่าาา";
 			    break;
+			    case (preg_match('bnk/', $text) ? true : false):
+                                 $res = "รู้จักแค่ป้าแก้ว,เฌอ,เนย และก็ตาหวานข่าาา";
+                            break;
 			    case (preg_match('/ชื่ออะไร/', $text) ? true : false):
-				$res = "เล้งแซ้บ48 เซเลปแห่งข้าวอกไก่";
+				 $res = "เล้งแซ้บ48 เซเลปข้าวอกไก่แห่งใต้เตียง BNK ข่าาาาาา่";
 			    break;
 			    case (preg_match('/แนะนำตัว/', $text) ? true : false):
 				$res = "เล้งแซ้บ48 เซเลปแห่งข้าวอกไก่";
