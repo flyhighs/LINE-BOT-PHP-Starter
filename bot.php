@@ -18,65 +18,75 @@ if (!is_null($events['events'])) {
 			
 			//TEST MSG
 			$res ="";
-			switch ($text) {
-			    case (preg_match('/สวัสดี/', $text) ? true : false):
-				$res = "สวัสดีจ้า";
-			    break;
-			    case (preg_match('/ดีจ้า/', $text) ? true : false):
-				$res = "สวัสดีจ้า";
-			    break;
-			    case (preg_match('/ดีๆ/', $text) ? true : false):
-				$res = "สวัสดีจ้า";
-			    break;
-			    case (preg_match('/ขอบคุณ/', $text) ? true : false):
-				$res = "ขอบคุณค่าา";
-			    break;
-			    case (preg_match('/รัก/', $text) ? true : false):
-				$res = "รักนะค๊า";
-			    break;
-			    case (preg_match('/บอส/', $text) ? true : false):
-				$res = "คนที่เฮนเฌอไปหาเนย";
-			    break;
-			    case (preg_match('/BNK/', $text) ? true : false):
-				$res = "รู้จักแค่ป้าแก้ว,เฌอ,เนย และก็ตาหวานข่าาา";
-			    break;
-			    case (preg_match('bnk/', $text) ? true : false):
-                                 $res = "รู้จักแค่ป้าแก้ว,เฌอ,เนย และก็ตาหวานข่าาา";
-                            break;
-			    case (preg_match('/ชื่ออะไร/', $text) ? true : false):
-				 $res = "เล้งแซ้บ48 เซเลปข้าวอกไก่แห่งใต้เตียง BNK ข่าาาาาา่";
-			    break;
-			    case (preg_match('/แนะนำตัว/', $text) ? true : false):
-				$res = "เล้งแซ้บ48 เซเลปแห่งข้าวอกไก่";
-			    break;
-			    case (preg_match('/แก้ว/', $text) ? true : false):
-				$res = "คนที่ขาสั้นๆ ปากๆดีเชิดๆป่าวค๊ะ";
-			    break;
-			    case (preg_match('/เฌอ/', $text) ? true : false):
-				$res = "คนที่บอสพูดว่า รักนะคะ แล้วนางก็พูดกลับมาแค่ขอบคุณมาสินะคะ จางในจาง";
-			    break;
-			    case (preg_match('/เนย/', $text) ? true : false):
-				$res = "ใช่คนที่น่ารักๆ พูดว่าบว่าาา ป่าวนะ";
-			    break;
-			    case (preg_match('/น่ารัก/', $text) ? true : false):
-				$res = "บว้าาาาา";
-			    break;
-			    case (preg_match('/ตาหวาน/', $text) ? true : false):
-				$res = "ถ้าจำไม่ผิดคนที่ตัวเตี้ยผิวเหลืองแน่นอน";
-			    break;
-			    case (preg_match('/ใช่/', $text) ? true : false):
-				$res = "ถูกด้วย หูวววว";
-			    break;
-			    case (preg_match('/55/', $text) ? true : false):
-				$res = "555555555555555";
-			    break;
-			    case (preg_match('/โหล/', $text) ? true : false):
-				$res = "เอากี่โหลดีเอ่ย";
-			    break;
-			    default:
-				$res = "ไม่ทราบข่า ถามไม่ตรงคำตอบ";
-			    break;
+			if(preg_match('/bot/',$text)){
+
+			    switch ($text) {
+				case (preg_match('/สวัสดี/', $text) ? true : false):
+				    $res = "สวัสดีจ้า";
+				break;
+				case (preg_match('/ดีจ้า/', $text) ? true : false):
+				    $res = "สวัสดีจ้า";
+				break;
+				case (preg_match('/ดีๆ/', $text) ? true : false):
+				    $res = "สวัสดีจ้า";
+				break;
+				case (preg_match('/ขอบคุณ/', $text) ? true : false):
+				    $res = "ขอบคุณค่าา";
+				break;
+				case (preg_match('/รัก/', $text) ? true : false):
+				    $res = "รักนะค๊า";
+				break;
+				case (preg_match('/บอส/', $text) ? true : false):
+				    $res = "คนที่เฮนเฌอไปหาเนย";
+				break;
+				case (preg_match('/BNK/', $text) ? true : false):
+				    $res = "รู้จักแค่ป้าแก้ว,เฌอ,เนย และก็ตาหวานข่าาา";
+				break;
+				case (preg_match('/bnk/', $text) ? true : false):
+				    $res = "รู้จักแค่ป้าแก้ว,เฌอ,เนย และก็ตาหวานข่าาา";
+				break;
+				case (preg_match('/ชื่ออะไร/', $text) ? true : false):
+				    $res = "เล้งแซ้บ48 เซเลปแห่งข้าวอกไก่";
+				break;
+				case (preg_match('/แนะนำตัว/', $text) ? true : false):
+				    $res = "เล้งแซ้บ48 เซเลปข้าวอกไกแห่งใต้เตียงBNK ข่าาาาาา";
+				break;
+				case (preg_match('/แก้ว/', $text) ? true : false):
+				    $res = "คนที่ขาสั้นๆ ปากๆดีเชิดๆป่าวค๊ะ";
+				break;
+				case (preg_match('/เฌอ/', $text) ? true : false):
+				    $res = "คนที่บอสพูดว่า รักนะคะ แล้วนางก็พูดกลับมาแค่ขอบคุณมาสินะคะ จางในจาง";
+				break;
+				case (preg_match('/เนย/', $text) ? true : false):
+				    $res = "ใช่คนที่น่ารักๆ พูดว่าบว่าาา ป่าวนะ";
+				break;
+				case (preg_match('/น่ารัก/', $text) ? true : false):
+				    $res = "บว้าาาาา";
+				break;
+				case (preg_match('/ตาหวาน/', $text) ? true : false):
+				    $res = "ถ้าจำไม่ผิดคนที่ตัวเตี้ยผิวเหลืองแน่นอน";
+				break;
+				case (preg_match('/ใช่/', $text) ? true : false):
+				    $res = "ถูกด้วย หูวววว";
+				break;
+				case (preg_match('/55/', $text) ? true : false):
+				    $res = "555555555555555";
+				break;
+				case (preg_match('/โหล/', $text) ? true : false):
+				    $res = "เอากี่โหลดีเอ่ย";
+				break;
+				case (preg_match('/ควย/', $text) ? true : false):
+				    $res = "เอาที่สบายใจเลย";
+				break;
+				case (preg_match('/หยุดพูด/', $text) ? true : false):
+				    $res = "จะให้เงียบ ก็เลิกพิมคำว่า bot นำหน้าสิ";
+				break;
+				default:
+				    $res = "ไม่ทราบข่า";
+				break;
+			    }
 			}
+
 			
 			// Build message to reply back
 			$messages = [
