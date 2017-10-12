@@ -69,20 +69,26 @@ if (!is_null($events['events'])) {
 				case (preg_match('/ใช่/', $text) ? true : false):
 				    $res = "ถูกด้วย หูวววว";
 				break;
+				case (preg_match('/ถูก่/', $text) ? true : false):
+                                    $res = "ถูกด้วย หูวววว";
+                                break;
 				case (preg_match('/55/', $text) ? true : false):
 				    $res = "555555555555555";
 				break;
 				case (preg_match('/โหล/', $text) ? true : false):
 				    $res = "เอากี่โหลดีเอ่ย";
 				break;
+				case (preg_match('/เฮน/', $text) ? true : false):
+				    $res = "เฮนแม่นเลย";
+				break;	    
 				case (preg_match('/ควย/', $text) ? true : false):
 				    $res = "เอาที่สบายใจเลย";
 				break;
 				case (preg_match('/หยุดพูด/', $text) ? true : false):
-				    $res = "จะให้เงียบ ก็เลิกพิมคำว่า bot นำหน้าสิ";
+				    $res = "จะให้เงียบ ก็เลิกพิมคำว่า bot นำหน้าดิ";
 				break;
 				default:
-				    $res = "ไม่ทราบข่า";
+				    $res = "ไม่ทราบข่า ไว้จะไปเผือกมาเพิ่มนะคะ";
 				break;
 			    }
 			}
