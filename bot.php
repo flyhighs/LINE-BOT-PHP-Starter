@@ -22,6 +22,12 @@ if (!is_null($events['events'])) {
 			    case (preg_match('/สวัสดี/', $text) ? true : false):
 				$res = "สวัสดีจ้า";
 			    break;
+			    case (preg_match('/ดีจ้า/', $text) ? true : false):
+				$res = "สวัสดีจ้า";
+			    break;
+			    case (preg_match('/ดีๆ/', $text) ? true : false):
+				$res = "สวัสดีจ้า";
+			    break;
 			    case (preg_match('/ขอบคุณ/', $text) ? true : false):
 				$res = "ขอบคุณค่าา";
 			    break;
@@ -32,7 +38,7 @@ if (!is_null($events['events'])) {
 				$res = "คนที่เฮนเฌอไปหาเนย";
 			    break;
 			    case (preg_match('/BNK/', $text) ? true : false):
-				$res = "ร้จักแค่ป้าแก้ว,เฌอ,เนย และก็ตาหวานข่าาา";
+				$res = "รู้จักแค่ป้าแก้ว,เฌอ,เนย และก็ตาหวานข่าาา";
 			    break;
 			    case (preg_match('/ชื่ออะไร/', $text) ? true : false):
 				$res = "เล้งแซ้บ48 เซเลปแห่งข้าวอกไก่";
